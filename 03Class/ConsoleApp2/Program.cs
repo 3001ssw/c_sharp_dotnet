@@ -12,7 +12,7 @@ class Person
 
     static Person()
     {
-        // 정적 함수가 호출되거나, 객체가 생성되면 1회 실행
+        // 정적 함수가 호출되거나, 객체가 생성되면 1회 실행, 1회만 실행 됨
         Console.WriteLine("static Person 실행");
     }
 
