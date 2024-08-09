@@ -72,9 +72,14 @@ class Program
         //Console.WriteLine("===================");
 
         // as, is
-        Desktop desk = computer as Desktop; // 컴파일은 되지만 에러가 남
+        Computer comp1 = desktop as Computer;
+        if (comp1 != null)
+            comp1.Boot();
+        Console.WriteLine("===================");
+
+        Desktop desk = computer as Desktop;
         if (desk != null)
-            desk.InsertMonitor(); // 이것도 에러 발생
+            desk.InsertMonitor();
         Console.WriteLine("===================");
 
         // is
@@ -84,6 +89,8 @@ class Program
         Console.WriteLine("===================");
 
         comp = notebook;
+        if (comp is Computer)
+            Console.WriteLine("comp is Computer");
         if (comp is Notebook)
             Console.WriteLine("comp is Notebook");
         Console.WriteLine("===================");
